@@ -10,4 +10,12 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+  {
+    path: 'dashboard',
+    loadComponent: () => import('./home/dashboard/dashboard.page').then( m => m.DashboardPage)
+  },
+  {
+    path: 'post',
+    loadComponent: () => import('./home/post/post.page').then( m => m.PostPage)
+  },
 ];
